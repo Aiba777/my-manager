@@ -1,0 +1,41 @@
+# Игнорируем зависимости Node.js
+node_modules/
+
+# Игнорируем файлы окружения (например, API-ключи)
+.env
+.env.local
+.env.*.local
+
+# Игнорируем логи и временные файлы
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+*.tmp
+
+# Игнорируем кеши и сборки
+dist/
+build/
+.cache/
+.vscode/
+.idea/
+
+# Игнорируем файлы ОС Windows и macOS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Игнорируем файлы настроек пользователя
+*.bash_history
+*.gitconfig
+.lesshst
+
+# Если случайно попали системные папки, можно добавить:
+AppData/
+
+# Игнорируем файлы, созданные редакторами
+*.swp
+*.swo
+*.bak
+*.orig

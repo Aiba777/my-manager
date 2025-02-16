@@ -1,0 +1,43 @@
+{
+  "name": "my-manager",
+  "version": "1.0.0",
+  "description": "Project structure for my-manager",
+  "main": "backend/index.js",
+  "scripts": {
+    "start:backend": "node backend/index.js",
+    "dev:backend": "nodemon backend/index.js",
+    "start:frontend": "vite",
+    "build:frontend": "vite build",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "jest",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run start:frontend\""
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.0",
+    "nodemon": "^2.0.20",
+    "jest": "^29.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0",
+    "concurrently": "^7.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "author": "",
+  "license": "ISC"
+}
